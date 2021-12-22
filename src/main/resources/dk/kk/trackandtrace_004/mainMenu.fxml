@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.kk.trackandtrace_004.MainMenuController"> <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <TabPane minHeight="400.0" prefHeight="274.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE">
+     <tabs>
+       <Tab fx:id="tabAdress" text="Opret Adresse">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="380.0">
+                  <children>
+                     <HBox minWidth="350.0" prefHeight="35.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                           <Label prefHeight="35.0" prefWidth="70.0" text="Navn" textAlignment="CENTER">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets left="10.0" />
+                              </padding>
+                           </Label>
+                           <TextField fx:id="name" minWidth="289.0" prefHeight="35.0" />
+                        </children>
+                        <padding>
+                           <Insets top="10.0" />
+                        </padding>
+                     </HBox>
+                     <HBox layoutY="41.0" minWidth="350.0" prefHeight="35.0">
+                        <children>
+                           <Label prefHeight="35.0" prefWidth="70.0" text="Adresse" textAlignment="CENTER">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets left="10.0" />
+                              </padding>
+                           </Label>
+                           <TextField fx:id="adress" minWidth="289.0" prefHeight="35.0" />
+                        </children>
+                        <padding>
+                           <Insets top="10.0" />
+                        </padding>
+                     </HBox>
+                     <HBox layoutY="82.0" minWidth="350.0" prefHeight="35.0">
+                        <children>
+                           <Label prefHeight="35.0" prefWidth="70.0" text="Post nr." textAlignment="CENTER">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets left="10.0" />
+                              </padding>
+                           </Label>
+                           <TextField fx:id="postnr" minWidth="289.0" prefHeight="35.0" />
+                        </children>
+                        <padding>
+                           <Insets top="10.0" />
+                        </padding>
+                     </HBox>
+                     <HBox layoutY="123.0" minWidth="350.0" prefHeight="35.0">
+                        <children>
+                           <Label prefHeight="35.0" prefWidth="70.0" text="By" textAlignment="CENTER">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets left="10.0" />
+                              </padding>
+                           </Label>
+                           <TextField fx:id="city" minWidth="289.0" prefHeight="35.0" />
+                        </children>
+                        <padding>
+                           <Insets top="10.0" />
+                        </padding>
+                     </HBox>
+                     <HBox layoutY="164.0" minWidth="350.0" prefHeight="35.0">
+                        <children>
+                           <Label prefHeight="35.0" prefWidth="70.0" text="Telefon" textAlignment="CENTER">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets left="10.0" />
+                              </padding>
+                           </Label>
+                           <TextField fx:id="mobile" minWidth="289.0" prefHeight="35.0" />
+                        </children>
+                        <padding>
+                           <Insets top="10.0" />
+                        </padding>
+                     </HBox>
+                     <HBox layoutY="205.0" minWidth="350.0" prefHeight="35.0">
+                        <children>
+                           <Label prefHeight="35.0" prefWidth="70.0" text="Mail" textAlignment="CENTER">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets left="10.0" />
+                              </padding>
+                           </Label>
+                           <TextField fx:id="mail" minWidth="289.0" prefHeight="35.0" />
+                        </children>
+                        <padding>
+                           <Insets top="10.0" />
+                        </padding>
+                     </HBox>
+                     <Button fx:id="opretAdresse" layoutX="105.0" layoutY="291.0" mnemonicParsing="false" onAction="#tryk" prefHeight="35.0" prefWidth="150.0" text="Opret Adresse" textAlignment="CENTER">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Button>
+                  </children></AnchorPane>
+         </content>
+       </Tab>
+       <Tab fx:id="faneOpretPakke" text="Opet Pakke">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="360.0">
+                  <children>
+                     <Label layoutX="14.0" layoutY="25.0" prefHeight="35.0" prefWidth="70.0" text="Afsender">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <ChoiceBox fx:id="senderchoice" layoutX="99.0" layoutY="27.0" minHeight="30.0" minWidth="-Infinity" prefWidth="230.0" />
+                     <Label layoutX="14.0" layoutY="76.0" prefHeight="35.0" prefWidth="70.0" text="Modtager">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <ChoiceBox fx:id="recipient" layoutX="99.0" layoutY="80.0" minHeight="30.0" minWidth="-Infinity" prefWidth="230.0" />
+                     <Label layoutX="14.0" layoutY="127.0" prefHeight="35.0" prefWidth="70.0" text="Levering">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <ChoiceBox fx:id="deliverychoice" layoutX="99.0" layoutY="129.0" prefHeight="30.0" prefWidth="230.0" />
+                     <Button fx:id="opretPakke" layoutX="133.0" layoutY="206.0" onAction="#createPackage" text="Opret Pakke">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+         <Tab text="Find Pakke">
+           <content>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <TextField fx:id="recipiantsSearchText" layoutX="14.0" layoutY="33.0" prefHeight="26.0" prefWidth="320.0" text="Søg på modtager" />
+                     <Button fx:id="RecipientSearchButton" layoutX="348.0" layoutY="33.0" mnemonicParsing="false" onAction="#costumerSearchPackages" prefWidth="45.0" text="Søg" />
+                     <ChoiceBox fx:id="RecipiantsPackages" layoutX="14.0" layoutY="69.0" prefWidth="380.0" />
+                     <Button layoutX="14.0" layoutY="107.0" mnemonicParsing="false" onAction="#packageSearch" prefWidth="380.0" text="Hent Pakke info" />
+                     <TextArea fx:id="TrackAndTrace" layoutX="14.0" layoutY="145.0" prefHeight="120.0" prefWidth="380.0" text="Track and Trace" />
+                     <TextField fx:id="addTextField" layoutX="14.0" layoutY="287.0" prefWidth="320.0" text="Status" />
+                     <Button fx:id="addTExtButton" layoutX="348.0" layoutY="287.0" mnemonicParsing="false" onAction="#addTrackAndTrace" prefWidth="45.0" text="Tilføj" />
+                     <Button fx:id="deliveretToRecipientButton" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" onAction="#delivered" prefWidth="380.0" text="Leveret til Modtager" />
+                  </children></AnchorPane>
+           </content>
+         </Tab>
+         <Tab text="Pakke Oversigt">
+           <content>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <ListView fx:id="PackageView" layoutX="30.0" layoutY="31.0" onEditStart="#packageListView" prefHeight="326.0" prefWidth="395.0" />
+                     <Button layoutX="30.0" layoutY="2.0" mnemonicParsing="false" onAction="#packageListView" text="Opdater" />
+                  </children>
+               </AnchorPane>
+           </content>
+         </Tab>
+     </tabs>
+   </TabPane>
+</VBox>
